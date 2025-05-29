@@ -358,6 +358,7 @@ nav ul li a.active::after {
 }
 /* About Section Styles */
 .about {
+    margin-top: 30px;
     padding: 5rem 0;
     background: var(--white);
 }
@@ -602,8 +603,128 @@ nav ul li a.active::after {
     margin-bottom: 1rem;
 }
 
+/* Clients Section Styles*/
+.clients {
+    padding: 5rem 0;
+    background: var(--light-gray);
+}
+
+.clients h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-description{
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 3rem;
+}
+
+.client-category {
+    margin-bottom: 3rem;
+}
+
+.client-category h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.client-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.client-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    justify-content: center;
+}
+
+.client-logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.client-logo p {
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .client-logo {
+        padding: 1rem;
+    }
+    
+    .client-logo img {
+        max-width: 120px;
+    }
+    
+    .testimonial blockquote {
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .client-category h3 {
+        font-size: 1.1rem;
+    }
+}
 /* Projects Section */
 .projects {
+    margin-top: 30px;
     padding: 5rem 0;
     background: var(--white);
 }
@@ -946,6 +1067,7 @@ nav ul li a.active::after {
 
 /* Contact Section */
 .contact {
+    margin-top: 30px;
     padding: 5rem 0;
     background: var(--white);
 }
